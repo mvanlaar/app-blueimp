@@ -1,4 +1,5 @@
-﻿var gulp = require('gulp'),
+﻿/// <binding ProjectOpened='watch' />
+var gulp = require('gulp'),
     concat = require("gulp-concat");
 
 var bases = {
@@ -11,9 +12,7 @@ var bases = {
 // task
 gulp.task("import-library", function () {
     // BlueImp JS - merge if I have many...
-    gulp.src([
-            bases.blueimp + "js/jquery.blueimp-gallery.min.js"
-        ]) 
+    gulp.src([bases.blueimp + "js/jquery.blueimp-gallery.min.js"]) 
         .pipe(concat('blueimp-set.js')) // concat 
         .pipe(gulp.dest(bases.distLib + "js/"));
 
