@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="@App.Path/dist/lib/blueimp/css/blueimp-set.css" data-enableoptimizations="false" />
+<script type="text/javascript" src="@App.Path/dist/lib/blueimp/js/blueimp-set.js" data-enableoptimizations="true"></script>
+<link rel="stylesheet" href="@App.Path/view.css" data-enableoptimizations="true" />
+
+<div class="sc-element">
+    <h2>@Content.Title @Content.Toolbar</h2>
+    @Html.Raw(Content.Introduction)
+</div>
+
+@RenderPage("_gallery-inner-list.cshtml")
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // Because we can't add the HTML for blueimp gallery directly to the body element, we add it with JS
+        $("body").append("<!-- The Gallery as lightbox dialog, should be a child element of the document body -->" +
+            "<div id='blueimp-gallery-@Dnn.Module.ModuleID' class='blueimp-gallery blueimp-gallery-controls ap-blueimp-gallery-lightbox' data-continuous='false'>" +
+            "<div class='slides'></div>" +
+            "<h3 class='title'></h3>" +
+            "<a class='prev'>‹</a>" +
+            "<a class='next'>›</a>" +
+            "<a class='close'>×</a>" +
+            "<a class='play-pause'></a>" +
+            "<ol class='indicator'></ol>" +
+            "</div>");
+
+    });
+</script>
+

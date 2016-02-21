@@ -18,5 +18,11 @@
     "thumbnail"
   ],
   "author": "2sic internet solutions Switzerland/Liechtenstein",
-  "license": "MIT"
+  "repository": {
+    "url": "https://github.com/2sic/app-blueimp"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp-concat": "^2.6.0"
+  }
 }
