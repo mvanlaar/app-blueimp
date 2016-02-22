@@ -2,19 +2,16 @@
 
 <div class="ap-blueimp-gallery-wrapper">
     <div class="ap-blueimp-gallery">
-        @foreach(var pic in AsAdam(Content, "Images").Files)
+        @foreach (var pic in AsAdam(Content, "Images").Files)
         {
             <div class="sc-element">
-                    @* The following code block will either offer to edit existing metadata, or create an "add-metadata" toolbar prefilled with this files ID
-                    <ul class="sc-menu" data-toolbar='{ "action": "metadata", 
-                    "items":[{"entityId": @pic.Metadata.EntityId, "contentType":"Image Metadata",
-                        "metadata":{"key":"file:@pic.FileId"}
-                    }]}'></ul>                    *@
-                    @if(Environment.Permissions.UserMayEditContent) 
-                    {
-                        <ul class="sc-menu" data-toolbar='{ "action": "metadata", "entityId": @pic.Metadata.EntityId, 
+                @* The following code block will either offer to edit existing metadata,
+                    or create an "add-metadata" toolbar prefilled with this files ID *@
+                @if (Environment.Permissions.UserMayEditContent)
+                {
+                    <ul class="sc-menu" data-toolbar='{ "action": "metadata", "entityId": @pic.Metadata.EntityId,
                             "contentType":"Image Metadata", "metadata":{"key":"file:@pic.FileId"}}'></ul>
-                    }
+                }
                 <a href="@pic.Url?w=@Content.Presentation.LightboxImageWidth&h=@Content.Presentation.LightboxImageHeight&mode=@Content.Presentation.LightboxResizeMode" title="@pic.Metadata.Title" data-gallery="#blueimp-gallery-@Dnn.Module.ModuleID">
                     <img src="@pic.Url?w=@Content.Presentation.ThumbnailImageWidth&h=@Content.Presentation.ThumbnailImageHeight&mode=@Content.Presentation.ThumbnailResizeMode" alt="@pic.Metadata.Title" />
                     @if (Content.Presentation.ShowTitleInOverview && pic.HasMetadata)
