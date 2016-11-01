@@ -1,4 +1,7 @@
 
+@* 
+	Just an information: this requires 2sxc 8.2.3 minimum, otherwise it won't compile
+*@
 
 <div class="ap-blueimp-gallery-wrapper">
     <div class="ap-blueimp-gallery">
@@ -7,7 +10,7 @@
             <div class="sc-element">
                 @* The following code block will either offer to edit existing metadata,
                     or create an "add-metadata" toolbar prefilled with this files ID *@
-                @if (Environment.Permissions.UserMayEditContent)
+                @if (Permissions.UserMayEditContent)
                 {
                     <ul class="sc-menu" data-toolbar='{ "action": "metadata", "entityId": @pic.Metadata.EntityId,
                             "contentType":"Image Metadata", "metadata":{"key":"file:@pic.FileId"}}'></ul>
