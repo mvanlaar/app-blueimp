@@ -8,7 +8,29 @@
 </div>
 
 <span id="blueimp-gallery-items-@Dnn.Module.ModuleID" style="display: none">
-    @RenderPage("_gallery-inner-list.cshtml")
+    <div class="ap-blueimp-gallery-wrapper">
+        <div class="ap-blueimp-gallery">
+            @foreach (var pic in AsAdam(Content, "Images").Files)
+            {
+                <div class="sc-element">
+                    @* The following code block will either offer to edit existing metadata,
+                        or create an "add-metadata" toolbar prefilled with this files ID *@
+                    @if (Permissions.UserMayEditContent)
+                    {
+                        <ul class="sc-menu" data-toolbar='{ "action": "metadata", "entityId": @pic.Metadata.EntityId,
+                                "contentType":"Image Metadata", "metadata":{"key":"file:@pic.FileId"}}'></ul>
+                    }
+                    <a href="@pic.Url?w=@App.Settings.LightboxImageWidth&h=@App.Settings.LightboxImageHeight&mode=max" title="@(((dynamic)pic.Metadata).Title)" data-gallery="#blueimp-gallery-@Dnn.Module.ModuleID">
+                        <img src="@pic.Url?w=@App.Settings.CarouselImageWidth&h=@App.Settings.CarouselImageHeight&mode=crop" alt="@pic.Metadata.Title" />
+                        @if (Presentation.ShowImageTitle && pic.HasMetadata)
+                        {
+                            <span>@pic.Metadata.Title</span>
+                        }
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
 </span>
 
 @* this is the rotator element *@

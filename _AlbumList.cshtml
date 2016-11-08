@@ -1,19 +1,5 @@
 <link rel="stylesheet" href="@App.Path/dist/app/view.css" data-enableoptimizations="true" />
 
-<div class="sc-element">
-    @ListContent.Toolbar
-    @if (ListPresentation.HeadingType != "hidden")
-    {
-        @Html.Raw("<" + ListPresentation.HeadingType + ">")
-        @ListContent.Title
-        @Html.Raw("</" + ListPresentation.HeadingType + ">")
-    }
-    else if (Dnn.User.IsInRole(Dnn.Portal.AdministratorRoleName))
-    {
-        <div>(Listentitel wird nicht angezeigt)</div>
-    }
-</div>
-
 <div class="ga-wrapper">
     <div class="ga-list ga-list-albums">
         @foreach (var e in List)
@@ -22,11 +8,11 @@
             <div class="ga-album sc-element">
                 @Content.Toolbar
                 <a href="@Dnn.Tab.FullUrl/mid/@Dnn.Module.ModuleID/album/@Content.Path">
-                    @if (!String.IsNullOrEmpty(Content.PreviewImage))
+                    @if (!String.IsNullOrEmpty(Content.AlbumThumbnail))
                     {
                         <div class="ga-album-preview">
                             <span class="ga-album-hover"><i class="glyphicon glyphicon-picture"></i></span>
-                            <img src="@Content.PreviewImage?w=278&h=208&mode=crop" alt="@Content.Title" />
+                            <img src="@Content.AlbumThumbnail?w=@App.Settings.AlbumThumbnailWidth&h=@App.Settings.AlbumThumbnailHeight&mode=crop" alt="@Content.Title" />
                         </div>
                     }
                     <h3>@Content.Title <span class="badge">@AsAdam(Content, "Images").Files.Count</span></h3>
