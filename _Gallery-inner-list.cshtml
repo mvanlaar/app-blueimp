@@ -15,8 +15,8 @@
                     <ul class="sc-menu" data-toolbar='{ "action": "metadata", "entityId": @pic.Metadata.EntityId,
                             "contentType":"Image Metadata", "metadata":{"key":"file:@pic.FileId"}}'></ul>
                 }
-                <a href="@pic.Url?w=@Content.Presentation.LightboxImageWidth&h=@Content.Presentation.LightboxImageHeight&mode=@Content.Presentation.LightboxResizeMode" title="@pic.Metadata.Title" data-gallery="#blueimp-gallery-@Dnn.Module.ModuleID">
-                    <img src="@pic.Url?w=@Content.Presentation.ThumbnailImageWidth&h=@Content.Presentation.ThumbnailImageHeight&mode=@Content.Presentation.ThumbnailResizeMode" alt="@pic.Metadata.Title" />
+                <a href="@pic.Url?w=1200&h=990&mode=max" title="@(((dynamic)pic.Metadata).Title)" data-gallery="#blueimp-gallery-@Dnn.Module.ModuleID">
+                    <img src="@pic.Url?w=278&h=208&mode=crop" alt="@pic.Metadata.Title" />
                     @if (Content.Presentation.ShowTitleInOverview && pic.HasMetadata)
                     {
                         <span>@pic.Metadata.Title</span>

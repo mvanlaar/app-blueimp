@@ -2,28 +2,119 @@
 <script type="text/javascript" src="@App.Path/dist/lib/blueimp/js/blueimp-set.js" data-enableoptimizations="true"></script>
 <link rel="stylesheet" href="@App.Path/dist/app/view.css" data-enableoptimizations="true" />
 
-<div class="sc-element">
-    <h2>@Content.Title @Content.Toolbar</h2>
-    @Html.Raw(Content.Introduction)
-</div>
+@{
+    var Content = this.Content;
+    var Presentation = this.Presentation;
+    if (!String.IsNullOrEmpty(Request.QueryString["Album"]))
+    {
+        var element = List.Where(a => a.Content.Path == Request.QueryString["Album"]).FirstOrDefault();
+        
+        if (element == null)
+        {
+            Response.StatusCode = 404;
+            Response.TrySkipIisCustomErrors = true;
+            <h1>@App.Resources.AlbumNotFound</h1>
+            <div>
+                @Html.Raw(App.Resources.AlbumNotFoundText)
+            </div>
+        }
+        else
+        {
+            Content = element.Content;
+            Presentation = element.Presentation;
+        }
+    }
 
-@RenderPage("_gallery-inner-list.cshtml")
+    if (Content != null)
+    {
+        IEnumerable<ToSic.SexyContent.Adam.AdamFile> images = AsAdam(Content, "Images").Files;
 
-<script type="text/javascript">
-    $(document).ready(function () {
+        // Handle sorting
+        switch ((string)Presentation.SortMode)
+        {
+            case "File asc":
+                images = images.OrderBy(c => c.FileName);
+                break;
+            case "File desc":
+                images = images.OrderByDescending(c => c.FileName);
+                break;
+            case "Title asc":
+                images = images.OrderBy(c => !c.HasMetadata).ThenBy(c => !c.HasMetadata ? "" : ((dynamic)c.Metadata).Title);
+                break;
+            case "Title desc":
+                images = images.OrderBy(c => !c.HasMetadata).ThenByDescending(c => !c.HasMetadata ? "" : ((dynamic)c.Metadata).Title);
+                break;
+            case "Upload asc":
+                images = images.OrderBy(c => c.CreatedOnDate);
+                break;
+            case "Upload desc":
+                images = images.OrderByDescending(c => c.CreatedOnDate);
+                break;
+        }
 
-        // Because we can't add the HTML for blueimp gallery directly to the body element, we add it with JS
-        $("body").append("<!-- The Gallery as lightbox dialog, should be a child element of the document body -->" +
-            "<div id='blueimp-gallery-@Dnn.Module.ModuleID' class='blueimp-gallery blueimp-gallery-controls ap-blueimp-gallery-lightbox' data-continuous='false'>" +
-            "<div class='slides'></div>" +
-            "<h3 class='title'></h3>" +
-            "<a class='prev'>‹</a>" +
-            "<a class='next'>›</a>" +
-            "<a class='close'>×</a>" +
-            "<a class='play-pause'></a>" +
-            "<ol class='indicator'></ol>" +
-            "</div>");
 
-    });
-</script>
+        <div class="sc-element">
+            @Content.Toolbar
+            @if (Presentation.HeadingType != "hidden")
+            {
+                @Html.Raw("<" + Presentation.HeadingType + ">")
+                @Content.Title
+                @Html.Raw("</" + Presentation.HeadingType + ">")
+            }
+			else if(Permissions.UserMayEditContent)
+			{
+			   <h2>(@App.Resources.TitleNotDisplayed)</h2>
+			}
+            @Html.Raw(Content.Introduction)
+        </div>
 
+       <div class="ga-wrapper">
+            <div class="ga-list ga-list-images">
+                @foreach (var pic in images)
+                {
+                    <div class="ga-image sc-element">
+                        @* The following code block will either offer to edit existing metadata,
+                            or create an "add-metadata" toolbar prefilled with this files ID *@
+                        @if (Permissions.UserMayEditContent)
+                        {
+                            <ul class="sc-menu" data-toolbar='{ "action": "metadata", "entityId": @pic.Metadata.EntityId,
+                            "contentType":"Gallery Image", "metadata":{"key":"file:@pic.FileId"}}'></ul>
+                        }
+                        <a href="@pic.Url?w=1200&h=990&mode=max" title="@(((dynamic)pic.Metadata).Title)" data-gallery="#blueimp-gallery-@Dnn.Module.ModuleID">
+                            <img src="@pic.Url?w=278&h=208&mode=crop" alt="@(((dynamic)pic.Metadata).Title)" />
+                            @if (Presentation.ShowImageTitle && pic.HasMetadata)
+                            {
+                                <span>@(((dynamic)pic.Metadata).Title)</span>
+                            }
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                // Make sure the app works with ajax preview
+                $("#blueimp-gallery-@Dnn.Module.ModuleID").remove();
+        
+                // Because we can't add the HTML for blueimp gallery directly to the body element, we add it with JS
+                $("body").append("<!-- The Gallery as lightbox dialog, should be a child element of the document body -->" +
+                    "<div id='blueimp-gallery-@Dnn.Module.ModuleID' class='blueimp-gallery blueimp-gallery-controls blueimp-gallery-2sxc' data-continuous='false'>" +
+                    "<div class='slides'></div>" +
+                    "<h3 class='title'></h3>" +
+                    "<a class='prev'>‹</a>" +
+                    "<a class='next'>›</a>" +
+                    "<a class='close'>×</a>" +
+                    "<a class='play-pause'></a>" +
+                    "<ol class='indicator'></ol>" +
+                    "</div>");
+        
+            });
+        </script>
+    }
+
+    if (!Dnn.Tab.FullUrl.EndsWith(Request.RawUrl))
+    {
+        <a href="@Dnn.Tab.FullUrl" class="btn btn-default">@App.Resources.BackToOverview</a>
+    }
+}
