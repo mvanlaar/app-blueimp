@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="08.05.06" ExportDate="2016-11-08T10:59:07.8089994+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="08.06.00" ExportDate="2016-11-08T13:54:24.4436771+01:00">
   <Header>
     <App Guid="76fde5a1-7a9d-4e60-ab98-9f17930bfbfb" />
     <Language Default="en-US" />
@@ -715,26 +715,6 @@
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="ContentType" AttributeSetStaticName="91acbec1-ba5b-44ec-84f3-2e1c1ad850eb" AttributeSetName="Image Metadata" EntityGUID="867e9a9f-f83b-4e05-a406-1245331157e1" KeyString="file:531">
-      <Value Key="Title" Value="Aurora Borealis" Type="String" />
-      <Value Key="Description" Value="The northern lights" Type="String" />
-    </Entity>
-    <Entity AssignmentObjectType="ContentType" AttributeSetStaticName="91acbec1-ba5b-44ec-84f3-2e1c1ad850eb" AttributeSetName="Image Metadata" EntityGUID="1fa3a75e-b472-4a72-8124-14599d2357e4" KeyString="file:528">
-      <Value Key="Title" Value="This might be rye 2" Type="String" />
-      <Value Key="Description" Value="...or barley or something else...?" Type="String" />
-    </Entity>
-    <Entity AssignmentObjectType="ContentType" AttributeSetStaticName="91acbec1-ba5b-44ec-84f3-2e1c1ad850eb" AttributeSetName="Image Metadata" EntityGUID="68a83cb9-45ba-43df-8af4-8863e1822a49" KeyString="file:530">
-      <Value Key="Title" Value="Piano Guys" Type="String" />
-      <Value Key="Description" Value="we love them :)" Type="String" />
-    </Entity>
-    <Entity AssignmentObjectType="ContentType" AttributeSetStaticName="91acbec1-ba5b-44ec-84f3-2e1c1ad850eb" AttributeSetName="Image Metadata" EntityGUID="61073cb9-88d6-4619-bff4-20f4a345fc93" KeyString="file:533">
-      <Value Key="Title" Value="This one is red" Type="String" />
-      <Value Key="Description" Value="...in case you were not sure or color blind" Type="String" />
-    </Entity>
-    <Entity AssignmentObjectType="ContentType" AttributeSetStaticName="91acbec1-ba5b-44ec-84f3-2e1c1ad850eb" AttributeSetName="Image Metadata" EntityGUID="1fc56e1e-4481-439c-a13c-8b74fe5a98e5" KeyString="file:534">
-      <Value Key="Title" Value="blow it away..." Type="String" />
-      <Value Key="Description" Value="" Type="String" />
-    </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="c11615bc-ae77-4950-9aab-daf483d9ba06">
       <Value Key="Name" Value="Single Album as touch-slider (in-page carousel)" Type="String">
         <Dimension DimensionID="29" ReadOnly="false" />
@@ -843,17 +823,6 @@
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
       <Value Key="Description" Value="This is a nice picture..." Type="String">
-        <Dimension DimensionID="29" ReadOnly="false" />
-      </Value>
-    </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="37f4438f-e33e-44a0-a483-ea9760ce8f8b" AttributeSetName="Single Album Presentation" EntityGUID="9923e82c-9f30-40cf-8853-ab9bb07ba3fe">
-      <Value Key="HeadingType" Value="h1" Type="String">
-        <Dimension DimensionID="29" ReadOnly="false" />
-      </Value>
-      <Value Key="SortMode" Value="File desc" Type="String">
-        <Dimension DimensionID="29" ReadOnly="false" />
-      </Value>
-      <Value Key="ShowImageTitle" Value="True" Type="Boolean">
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
     </Entity>
