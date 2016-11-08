@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="08.05.06" ExportDate="2016-11-08T09:28:56.0086461+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="08.05.06" ExportDate="2016-11-08T10:59:07.8089994+01:00">
   <Header>
     <App Guid="76fde5a1-7a9d-4e60-ab98-9f17930bfbfb" />
     <Language Default="en-US" />
@@ -9,94 +9,6 @@
     </Dimensions>
   </Header>
   <AttributeSets>
-    <AttributeSet StaticName="db950bb6-b74f-4e17-9be5-ed6bc9e9975c" Name="Album List Presentation" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
-      <Attributes>
-        <Attribute StaticName="HeadingType" Type="String" IsTitle="true">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="b7db134a-8675-4c74-9eec-e791836b1042" KeyNumber="871">
-            <Value Key="Name" Value="Type of heading" Type="String">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="Name" Value="Typ der Überschrift" Type="String">
-              <Dimension DimensionID="30" ReadOnly="false" />
-            </Value>
-            <Value Key="Notes" Value="&lt;p&gt;Choose the heading type (Heading 1, Heading 2 etc.)&amp;nbsp;or hide the title.&lt;/p&gt;" Type="String">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="Notes" Value="&lt;p&gt;W&amp;auml;hlen Sie den Typ der &amp;Uuml;berschrift (&amp;Uuml;berschrift 1, &amp;Uuml;berschrift 2 etc.) oder blenden Sie den Titel komplett aus.&lt;/p&gt;" Type="String">
-              <Dimension DimensionID="30" ReadOnly="false" />
-            </Value>
-            <Value Key="VisibleInEditUI" Value="True" Type="Boolean">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="Required" Value="False" Type="Boolean">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="DefaultValue" Value="" Type="String">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="Disabled" Value="False" Type="Boolean">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="InputType" Value="string-dropdown" Type="String">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="ValidationRegExJavaScript" Value="" Type="String">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-          </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="e957ed1f-f805-46e8-b28f-cb5ccf5d8f4f" KeyNumber="871" />
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-dropdown" AttributeSetName="@string-dropdown" EntityGUID="a3a0ad38-6e52-4f41-adc2-b2db7b51d920" KeyNumber="871">
-            <Value Key="DropdownValues" Value="Heading 1:h1&#xA;Heading 2:h2&#xA;Heading 3:h3&#xA;(hide):hidden" Type="String">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-          </Entity>
-        </Attribute>
-      </Attributes>
-    </AttributeSet>
-    <AttributeSet StaticName="c4fc2563-0b99-427b-998f-01b559ea5e6f" Name="Album List Settings" Description="Album List Settings" Scope="2SexyContent" AlwaysShareConfiguration="false">
-      <Attributes>
-        <Attribute StaticName="Title" Type="String" IsTitle="true">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="e5f51411-f207-499c-b1da-e50ac93e4fa0" KeyNumber="872">
-            <Value Key="Name" Value="Title" Type="String">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="Name" Value="Titel" Type="String">
-              <Dimension DimensionID="30" ReadOnly="false" />
-            </Value>
-            <Value Key="Notes" Value="&lt;p&gt;Enter a title for the gallery.&lt;/p&gt;" Type="String">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="Notes" Value="&lt;p&gt;Geben Sie einen Titel f&amp;uuml;r die Galerie ein.&lt;/p&gt;" Type="String">
-              <Dimension DimensionID="30" ReadOnly="false" />
-            </Value>
-            <Value Key="VisibleInEditUI" Value="True" Type="Boolean">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="Required" Value="True" Type="Boolean">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="DefaultValue" Value="" Type="String">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="Disabled" Value="False" Type="Boolean">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="InputType" Value="string-default" Type="String">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-            <Value Key="ValidationRegExJavaScript" Value="" Type="String">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-          </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="c501f949-fee1-4930-acc7-14ddcaba4007" KeyNumber="872" />
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-default" AttributeSetName="@string-default" EntityGUID="e636faff-abd6-4de8-9885-410086af363d" KeyNumber="872">
-            <Value Key="RowCount" Value="" Type="Number">
-              <Dimension DimensionID="29" ReadOnly="false" />
-            </Value>
-          </Entity>
-        </Attribute>
-      </Attributes>
-    </AttributeSet>
     <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="AlbumNotFoundTitle" Type="String" IsTitle="true">
@@ -131,11 +43,60 @@
     </AttributeSet>
     <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
       <Attributes>
-        <Attribute StaticName="AppTitle" Type="String" IsTitle="true">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="53a887f4-c6ee-4578-93f5-90133c141971" KeyNumber="834">
-            <Value Key="Name" Value="AppTitle" Type="String" />
+        <Attribute StaticName="ImageThumbnailWidth" Type="Number" IsTitle="true">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="87fc4a83-8fe4-4f28-b8bc-71219b55ba94" KeyNumber="882">
+            <Value Key="Name" Value="ImageThumbnailWidth" Type="String" />
             <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
-            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="InputType" Value="number-default" Type="String" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="ImageThumbnailHeight" Type="Number" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="3658df3d-db9a-4faa-bfd7-7a5c36235985" KeyNumber="883">
+            <Value Key="Name" Value="ImageThumbnailHeight" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+            <Value Key="InputType" Value="number-default" Type="String" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="AlbumThumbnailWidth" Type="Number" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="2192983f-1eae-4428-af16-e6cdcb7b381a" KeyNumber="884">
+            <Value Key="Name" Value="AlbumThumbnailWidth" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+            <Value Key="InputType" Value="number-default" Type="String" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="AlbumThumbnailHeight" Type="Number" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="b2e9f4b2-45ec-4c29-be1f-5d93775f8bb3" KeyNumber="885">
+            <Value Key="Name" Value="AlbumThumbnailHeight" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+            <Value Key="InputType" Value="number-default" Type="String" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="CarouselImageWidth" Type="Number" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="b59fc0d9-bab9-46ea-9ed8-f721563387d0" KeyNumber="886">
+            <Value Key="Name" Value="CarouselImageWidth" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+            <Value Key="InputType" Value="number-default" Type="String" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="CarouselImageHeight" Type="Number" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="c74373df-8105-4f80-b45a-560b42424aa7" KeyNumber="887">
+            <Value Key="Name" Value="CarouselImageHeight" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+            <Value Key="InputType" Value="number-default" Type="String" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="LightboxImageWidth" Type="Number" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="c71cf2a3-a1ed-43c4-9e04-9794181e0d56" KeyNumber="888">
+            <Value Key="Name" Value="LightboxImageWidth" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+            <Value Key="InputType" Value="number-default" Type="String" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="LightboxImageHeight" Type="Number" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="f9bf59b8-b604-465e-81a7-6ccf3fee0252" KeyNumber="889">
+            <Value Key="Name" Value="LightboxImageHeight" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+            <Value Key="InputType" Value="number-default" Type="String" />
           </Entity>
         </Attribute>
       </Attributes>
@@ -596,18 +557,69 @@
   </AttributeSets>
   <Entities>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="2SexyContent-App" AttributeSetName="2SexyContent-App" EntityGUID="db255047-f199-45d0-ab1c-de37901a6814" KeyNumber="37">
-      <Value Key="DisplayName" Value="blueimp Gallery" Type="String" />
-      <Value Key="Description" Value="A DNN (DotNetNuke) packaged solution for the awesome blueimp gallery - the version 2 uses ADAM" Type="String" />
-      <Value Key="Version" Value="02.00.06" Type="String" />
-      <Value Key="Folder" Value="blueimp Gallery" Type="String" />
-      <Value Key="AllowTokenTemplates" Value="False" Type="Boolean" />
-      <Value Key="AllowRazorTemplates" Value="True" Type="Boolean" />
-      <Value Key="Hidden" Value="False" Type="Boolean" />
-      <Value Key="OriginalId" Value="76fde5a1-7a9d-4e60-ab98-9f17930bfbfb" Type="String" />
-      <Value Key="RequiredVersion" Value="08.03.00" Type="String" />
-      <Value Key="RequiredDnnVersion" Value="07.02.00" Type="String" />
+      <Value Key="DisplayName" Value="Image Gallery (blueimp)" Type="String">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="DisplayName" Value="Bildergalerie (blueimp)" Type="String">
+        <Dimension DimensionID="30" ReadOnly="false" />
+      </Value>
+      <Value Key="Description" Value="A DNN (DotNetNuke) packaged solution for the awesome blueimp gallery" Type="String">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="Version" Value="03.00.00" Type="String">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="Folder" Value="blueimp Gallery" Type="String">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="AllowTokenTemplates" Value="False" Type="Boolean">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="AllowRazorTemplates" Value="True" Type="Boolean">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="Hidden" Value="False" Type="Boolean">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="OriginalId" Value="76fde5a1-7a9d-4e60-ab98-9f17930bfbfb" Type="String">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="RequiredVersion" Value="08.03.00" Type="String">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="RequiredDnnVersion" Value="07.02.00" Type="String">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="SupportsAjaxReload" Value="False" Type="Boolean">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
     </Entity>
-    <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="6c848250-e8eb-4b9a-9d05-cad4b8ff5567" KeyNumber="37" />
+    <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="6c848250-e8eb-4b9a-9d05-cad4b8ff5567" KeyNumber="37">
+      <Value Key="ImageThumbnailWidth" Value="270" Type="Number">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="ImageThumbnailHeight" Value="202" Type="Number">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="AlbumThumbnailWidth" Value="363" Type="Number">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="AlbumThumbnailHeight" Value="272" Type="Number">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="CarouselImageWidth" Value="825" Type="Number">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="CarouselImageHeight" Value="464" Type="Number">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="LightboxImageWidth" Value="1200" Type="Number">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+      <Value Key="LightboxImageHeight" Value="1200" Type="Number">
+        <Dimension DimensionID="29" ReadOnly="false" />
+      </Value>
+    </Entity>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="fb4b1f70-ea4f-43a9-aa94-49c3e6dbe30e" KeyNumber="37">
       <Value Key="AlbumNotFoundTitle" Value="Album not found" Type="String">
         <Dimension DimensionID="29" ReadOnly="false" />
@@ -703,11 +715,6 @@
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="db950bb6-b74f-4e17-9be5-ed6bc9e9975c" AttributeSetName="Album List Presentation" EntityGUID="2a2f76eb-d55a-4ef0-a624-c10b2f59f802">
-      <Value Key="HeadingType" Value="h1" Type="String">
-        <Dimension DimensionID="29" ReadOnly="false" />
-      </Value>
-    </Entity>
     <Entity AssignmentObjectType="ContentType" AttributeSetStaticName="91acbec1-ba5b-44ec-84f3-2e1c1ad850eb" AttributeSetName="Image Metadata" EntityGUID="867e9a9f-f83b-4e05-a406-1245331157e1" KeyString="file:531">
       <Value Key="Title" Value="Aurora Borealis" Type="String" />
       <Value Key="Description" Value="The northern lights" Type="String" />
@@ -739,10 +746,10 @@
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
       <Value Key="ContentDemoEntity" Value="8b531990-16b1-47ef-8469-c7cbe4d92ec9" Type="Entity" />
-      <Value Key="PresentationTypeStaticName" Value="db950bb6-b74f-4e17-9be5-ed6bc9e9975c" Type="String">
+      <Value Key="PresentationTypeStaticName" Value="37f4438f-e33e-44a0-a483-ea9760ce8f8b" Type="String">
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
-      <Value Key="PresentationDemoEntity" Value="" Type="Entity" />
+      <Value Key="PresentationDemoEntity" Value="2854fd58-c2cc-4e93-b44f-3404d654cae4" Type="Entity" />
       <Value Key="ListContentTypeStaticName" Value="" Type="String">
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
@@ -774,14 +781,6 @@
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="c4fc2563-0b99-427b-998f-01b559ea5e6f" AttributeSetName="Album List Settings" EntityGUID="3259b4db-39b6-4ee6-b469-12821567c400">
-      <Value Key="Title" Value="New gallery" Type="String">
-        <Dimension DimensionID="29" ReadOnly="false" />
-      </Value>
-      <Value Key="Title" Value="Neue Bildergalerie" Type="String">
-        <Dimension DimensionID="30" ReadOnly="false" />
-      </Value>
-    </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="37f4438f-e33e-44a0-a483-ea9760ce8f8b" AttributeSetName="Single Album Presentation" EntityGUID="2854fd58-c2cc-4e93-b44f-3404d654cae4">
       <Value Key="HeadingType" Value="h1" Type="String">
         <Dimension DimensionID="29" ReadOnly="false" />
@@ -807,15 +806,15 @@
       <Value Key="PresentationTypeStaticName" Value="37f4438f-e33e-44a0-a483-ea9760ce8f8b" Type="String">
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
-      <Value Key="PresentationDemoEntity" Value="2854fd58-c2cc-4e93-b44f-3404d654cae4" Type="Entity" />
-      <Value Key="ListContentTypeStaticName" Value="c4fc2563-0b99-427b-998f-01b559ea5e6f" Type="String">
+      <Value Key="PresentationDemoEntity" Value="" Type="Entity" />
+      <Value Key="ListContentTypeStaticName" Value="" Type="String">
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
-      <Value Key="ListContentDemoEntity" Value="3259b4db-39b6-4ee6-b469-12821567c400" Type="Entity" />
-      <Value Key="ListPresentationTypeStaticName" Value="db950bb6-b74f-4e17-9be5-ed6bc9e9975c" Type="String">
+      <Value Key="ListContentDemoEntity" Value="" Type="Entity" />
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String">
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
-      <Value Key="ListPresentationDemoEntity" Value="2a2f76eb-d55a-4ef0-a624-c10b2f59f802" Type="Entity" />
+      <Value Key="ListPresentationDemoEntity" Value="" Type="Entity" />
       <Value Key="Type" Value="C# Razor" Type="String">
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
@@ -873,6 +872,8 @@
     <Folder Id="588" RelativePath="adam/blueimp Gallery/kBlTi7EW70eEacfL5NkuyQ/PreviewImage/" />
     <Folder Id="538" RelativePath="adam/blueimp Gallery/kBlTi7EW70eEacfL5NkuyQ/Images/" />
     <Folder Id="536" RelativePath="adam/blueimp Gallery/" />
+    <Folder Id="593" RelativePath="adam/blueimp Gallery/_OrPrj1zSkScvveoyfbuvw/" />
+    <Folder Id="594" RelativePath="adam/blueimp Gallery/_OrPrj1zSkScvveoyfbuvw/Images/" />
     <Folder Id="586" RelativePath="adam/blueimp Gallery/3iDQlPQiS0OnGBq1yjf41Q/" />
     <Folder Id="587" RelativePath="adam/blueimp Gallery/3iDQlPQiS0OnGBq1yjf41Q/Images/" />
     <Folder Id="539" RelativePath="adam/blueimp Gallery/4VQgkR5uSEqT1Dx_8jWO5g/" />
