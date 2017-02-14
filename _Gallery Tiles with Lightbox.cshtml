@@ -79,7 +79,7 @@
                         @if (Permissions.UserMayEditContent)
                         {
                             <ul class="sc-menu" data-toolbar='{ "action": "metadata", "entityId": @pic.Metadata.EntityId,
-                            "contentType":"Image Metadata", "metadata":{"key":"file:@pic.FileId"}}'></ul>
+                            "contentType":"ImageMetadata", "metadata":{"key":"file:@pic.FileId"}}'></ul>
                         }
                         <a href="@pic.Url?w=@App.Settings.LightboxImageWidth&h=@App.Settings.LightboxImageHeight&mode=max" title="@(((dynamic)pic.Metadata).Title)" data-gallery="#blueimp-gallery-@Dnn.Module.ModuleID">
                             <img src="@pic.Url?w=@App.Settings.ImageThumbnailWidth&h=@App.Settings.ImageThumbnailHeight&mode=crop" alt="@(((dynamic)pic.Metadata).Title)" />
