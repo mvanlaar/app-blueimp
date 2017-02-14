@@ -28,7 +28,7 @@ gulp.task("import-library", function () {
 });
 
 gulp.task("build-css", function() {
-    gulp.src(bases.src + "view.css")
+    gulp.src(bases.src + "*.css")
         .pipe(gulp.dest(bases.distApp));
 });
 
