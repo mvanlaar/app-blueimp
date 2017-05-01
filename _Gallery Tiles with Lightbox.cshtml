@@ -46,10 +46,10 @@
                 images = images.OrderBy(c => !c.HasMetadata).ThenByDescending(c => !c.HasMetadata ? "" : ((dynamic)c.Metadata).Title);
                 break;
             case "Upload asc":
-                images = images.OrderBy(c => c.CreatedOnDate);
+                images = images.OrderBy(c => c.LastModificationTime);
                 break;
             case "Upload desc":
-                images = images.OrderByDescending(c => c.CreatedOnDate);
+                images = images.OrderByDescending(c => c.LastModificationTime);
                 break;
         }
 
