@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="08.10.01" ExportDate="2017-03-06T14:34:49.4629796+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="08.12.00" ExportDate="2017-05-01T11:38:00.3343996+02:00">
   <Header>
     <App Guid="76fde5a1-7a9d-4e60-ab98-9f17930bfbfb" />
     <Language Default="en-US" />
@@ -566,7 +566,7 @@
       <Value Key="Description" Value="A DNN (DotNetNuke) packaged solution for the awesome blueimp gallery" Type="String">
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.01.00" Type="String">
+      <Value Key="Version" Value="03.01.01" Type="String">
         <Dimension DimensionID="29" ReadOnly="false" />
       </Value>
       <Value Key="Folder" Value="blueimp Gallery" Type="String">
