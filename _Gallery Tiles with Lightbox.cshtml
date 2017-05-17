@@ -21,11 +21,17 @@
                 @Html.Raw(App.Resources.AlbumNotFoundText)
             </div>
         }
+        else {
+            // Set meta-title
+            var pageObj = Context.CurrentHandler as Page;
+            pageObj.Title = album.Title + " | " + pageObj.Title;
+        }
     }
 
 
     if (album != null)
     {
+    
         var albSettings = album.Presentation;
 
         IEnumerable<ToSic.SexyContent.Adam.AdamFile> images = AsAdam(album, "Images").Files;
@@ -55,7 +61,7 @@
 
 
         <div class="sc-element">
-            @album.Toolbar
+            @Edit.Toolbar(album, actions: "edit")
             @if (albSettings.HeadingType != "hidden")
             {
                 @Html.Raw("<" + albSettings.HeadingType + ">")
